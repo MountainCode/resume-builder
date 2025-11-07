@@ -31,6 +31,7 @@ $endif$
 
 % Customize section headings
 \titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+\setcounter{secnumdepth}{-2}
 \titleformat{\section}
   {\Large\bfseries\raggedright}{\thesection}{0em}{\MakeUppercase}
 
@@ -66,8 +67,8 @@ $endif$
 
 % Use a dedicated title/maketitle setup to control the top block:
 
-\titleformat{\section} % Keep section formatting
-  {\Large\bfseries\raggedright}{\thesection}{0em}{\MakeUppercase}
+\titleformat{\section}
+  {\Large\bfseries\raggedright}{}{0em}{\MakeUppercase} % The second argument is now EMPTY {}
 \titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
 
 \begin{document}

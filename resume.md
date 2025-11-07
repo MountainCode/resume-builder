@@ -5,9 +5,10 @@ header-info: |
   123 Tech Lane | Anytown, CA 90210 | (555) 555-1234 | alex.programmer@email.com
 fontsize: 10pt
 geometry: margin=1in
+numbersections: false
 ---
 
-## 💻 Experience
+## Experience
 
 ### **Senior Software Engineer** | **TechCorp Solutions**
 *Anytown, CA* | *2020 – Present*
@@ -22,7 +23,7 @@ geometry: margin=1in
 * Developed key features for the flagship mobile application using React Native.
 * Reduced cloud hosting costs by 15% through infrastructure optimization.
 
-## 🎓 Education
+## Education
 
 ### **University of California, Berkeley**
 *Berkeley, CA* | *2014 – 2018*
@@ -30,7 +31,7 @@ geometry: margin=1in
 * **B.S. in Computer Science**
 * *Relevant Coursework:* Data Structures, Algorithms, Distributed Systems
 
-## 🛠️ Skills
+##  Skills
 
 * **Languages:** Python, JavaScript, Go, SQL
 * **Frameworks:** React, Node.js, Django
