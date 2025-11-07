@@ -38,6 +38,7 @@ $endif$
 % Set header style
 \usepackage{fancyhdr}
 \usepackage{titlesec} % Ensure titlesec is still loaded
+\usepackage[dvipsnames]{xcolor}
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -70,6 +71,26 @@ $endif$
 \titleformat{\section}
   {\Large\bfseries\raggedright}{}{0em}{\MakeUppercase} % The second argument is now EMPTY {}
 \titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+
+% Define a light gray color (using RGB values from 0 to 1)
+\definecolor{resumegray}{rgb}{0.9, 0.9, 0.9}
+
+% Define a command to apply color and uppercase
+\newcommand{\titlecolorbox}[1]{\colorbox{resumegray}{\MakeUppercase{#1}}}
+
+% Customize section headings
+\titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+\setcounter{secnumdepth}{-2} % Keep this to suppress numbering
+
+\titleformat{\section}
+  % 1. Style: Large, Bold, Right-aligned
+  {\Large\bfseries\raggedright}
+  % 2. Number: Empty (because we suppressed numbering)
+  {}
+  % 3. Separation: 0em
+  {0em}
+  % 4. Title Command: Use colorbox around the title text (#1)
+  {\titlecolorbox}
 
 \begin{document}
 
