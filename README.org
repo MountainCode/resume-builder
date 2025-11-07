@@ -1,10 +1,25 @@
+* Resume Builder Tool
+
 #+begin_src shell
-docker build -t resume .
-docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume /bin/bash
+docker build -t resume-builder .
 #+end_src
+
+It's going to take a while to install all of the LaTex libraries.
+
+Install the NPM packages.
 #+begin_src shell
-pandoc resume.md -o out/resume.pdf --template=template.tex --pdf-engine=lualatex
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume-builder npm i
 #+end_src
+
+Edit the ~data.json~ and ~data.yml~ files. Then generate your resume.
+
 #+begin_src shell
-docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume pandoc resume.md -o out/resume.pdf --template=template.tex --pdf-engine=lualatex
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume-builder node index.js
 #+end_src
+
+This will update the PDF whenever you change your data.
+#+begin_src shell
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume-builder npx nodemon
+#+end_src
+
+Find your PDF in ~out/resume.pdf~.

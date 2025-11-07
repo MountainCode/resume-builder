@@ -40,6 +40,7 @@ try {
        --pdf-engine=lualatex
 `
   );
+
   console.log(stdout);
   console.error(stderr);
 } catch(err) {
