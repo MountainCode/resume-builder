@@ -36,19 +36,49 @@ $endif$
 
 % Set header style
 \usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-\fancyhead[C]{\large\textbf{$author$}}
-\fancyhead[R]{\normalsize\textit{$header-info$}}
-\renewcommand{\headrulewidth}{0.4pt}
-\fancypagestyle{plain}{\fancyhead[C]{\large\textbf{$author$}}
-\fancyhead[R]{\normalsize\textit{$header-info$}}\renewcommand{\headrulewidth}{0.4pt}}
+\usepackage{titlesec} % Ensure titlesec is still loaded
 
-% Pandoc's definition for tight lists (used when there are no blank lines between list items)
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+% --- HEADER DEFINITION ---
+\pagestyle{fancy}
+\fancyhead{} % Clear all header fields
+\fancyfoot{} % Clear all footer fields
+
+% 1. Place the Author Name in the Center of the header (C)
+\fancyhead[C]{\huge\textbf{$author$}}
+
+% 2. Use the 'L' and 'R' sections for the header-info
+% NOTE: This is complex. A better approach is often to skip fancyhdr for this specific need.
+% We will redefine the entire header structure below to fix the overlap.
+
+\fancypagestyle{plain}{ % Redefine the 'plain' style (used for page 1)
+    \fancyhead{}
+    \fancyfoot{}
+    \fancyhead[C]{\huge\textbf{$author$}}
+    \fancyhead[R]{} % Clear the right side for the name
+
+    % Now, add the header-info below the rule, NOT using fancyhdr
+    \renewcommand{\headrulewidth}{0.4pt}
+}
+\pagestyle{plain} % Apply this style to the entire document
+
+% Use a dedicated title/maketitle setup to control the top block:
+
+\titleformat{\section} % Keep section formatting
+  {\Large\bfseries\raggedright}{\thesection}{0em}{\MakeUppercase}
+\titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+
 \begin{document}
+
+% Add the Header Info block right here, outside the fancyhdr system
+\begin{center}
+    \normalsize $header-info$
+\end{center}
+\hrule % Horizontal rule below the contact details
+
+% Now the body content follows:
 $body$
+
 \end{document}
