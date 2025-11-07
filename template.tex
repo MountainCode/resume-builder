@@ -1,0 +1,54 @@
+$if(header-includes)$
+$header-includes$
+$endif$
+\documentclass[$fontsize$]{article}
+
+\usepackage{fontspec}
+
+% 1. Define the emoji fallback font (must be installed on your system)
+% Try Noto Color Emoji, Segoe UI Emoji (Windows), or Apple Color Emoji (macOS)
+\directlua{luaotfload.add_fallback ("emojifallback", { "Noto Color Emoji:mode=harf;" } )}
+
+% 2. Set your main font and enable the fallback feature
+\setmainfont{DejaVu Sans}[
+  % Replace DejaVu Sans with your preferred main font for the resume
+  RawFeature={fallback=emojifallback}
+]
+
+% Ensure the titles are also set using a font that supports the fallback
+\setmonofont{DejaVu Sans Mono}[
+  RawFeature={fallback=emojifallback}
+]
+
+\usepackage{geometry}
+\geometry{$geometry$}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+% Remove page number
+\pagestyle{empty}
+
+% Customize section headings
+\titlespacing*{\section}{0pt}{1.5ex}{0.8ex}
+\titleformat{\section}
+  {\Large\bfseries\raggedright}{\thesection}{0em}{\MakeUppercase}
+
+% Set header style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[C]{\large\textbf{$author$}}
+\fancyhead[R]{\normalsize\textit{$header-info$}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{\fancyhead[C]{\large\textbf{$author$}}
+\fancyhead[R]{\normalsize\textit{$header-info$}}\renewcommand{\headrulewidth}{0.4pt}}
+
+% Pandoc's definition for tight lists (used when there are no blank lines between list items)
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\begin{document}
+$body$
+\end{document}

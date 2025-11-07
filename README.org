@@ -1,0 +1,3 @@
+#+begin_src shell
+pandoc resume.md -o resume.pdf --template=template.tex --pdf-engine=lualatex
+#+end_src
