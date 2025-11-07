@@ -1,8 +1,16 @@
 ---
-title: "Professional Resume"
-author: "Alex J. Programmer"
-header-info: |
-  123 Tech Lane | Anytown, CA 90210 | (555) 555-1234 | alex.programmer@email.com
+title: "{{author}} Resume"
+author: {{author}}
+contact: |
+  {{#contact}}
+    {{#address}}{{city}}, {{state}} {{zip}}{{/address}}
+    | {{phone}}
+    | {{email}}
+  {{/contact}}
+social: |
+  {{#social}}
+    {{#linkedin}}[{{text}}]({{url}}){{/linkedin}}
+  {{/social}}
 fontsize: 10pt
 geometry: margin=1in
 numbersections: false

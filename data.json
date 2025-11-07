@@ -1,0 +1,18 @@
+{
+  "author": "Chris Kentfield",
+  "contact": {
+    "address": {
+      "city": "Jeffersonville",
+      "state": "VT",
+      "zip": "05464"
+    },
+    "phone": "(802) 990-3123",
+    "email": "chris@unstuckdev.com"
+  },
+  "social": {
+    "linkedin": {
+      "url": "https://linkedin.com/in/chriskentfield",
+      "text": "linkedin.com/in/chriskentfield"
+    }
+  }
+}
