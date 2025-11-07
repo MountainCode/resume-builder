@@ -18,6 +18,18 @@ geometry: margin=1in
 numbersections: false
 ---
 
+## Summary
+
+{{professional_summary}}
+
+## Skills
+
+{{#skills_by_category}}
+{{category}}:
+: {{first_skill}}{{#remaining_skills}}, {{.}}{{/remaining_skills}}
+
+{{/skills_by_category}}
+
 ## Experience
 
 ### **Senior Software Engineer** | **TechCorp Solutions**
@@ -40,9 +52,3 @@ numbersections: false
 
 * **B.S. in Computer Science**
 * *Relevant Coursework:* Data Structures, Algorithms, Distributed Systems
-
-##  Skills
-
-* **Languages:** Python, JavaScript, Go, SQL
-* **Frameworks:** React, Node.js, Django
-* **Tools:** Docker, Git, AWS, Kubernetes

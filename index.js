@@ -9,9 +9,22 @@ try {
   const template = await readFile('resume.md.mustache', { encoding: 'utf-8' });
   const jsonData = await readFile('data.json', { encoding: 'utf-8' });
   const data = JSON.parse(jsonData);
+  const dataForView = {
+    ...data,
+    skills_by_category: data.skills_by_category.map(
+      ({category, skills}) => {
+        const sortedSkills = skills.slice().sort();
+        return {
+          category,
+          first_skill: sortedSkills[0],
+          remaining_skills: sortedSkills.slice(1)
+        };
+      }
+    )
+  };
   const markdown = Mustache.render(
     template,
-    data
+    dataForView
   );
   await writeFile(
     './out/resume.md',
