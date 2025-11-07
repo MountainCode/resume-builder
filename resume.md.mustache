@@ -30,20 +30,20 @@ numbersections: false
 
 {{/skills_by_category}}
 
-## Experience
+## Work Experience
 
-### **Senior Software Engineer** | **TechCorp Solutions**
-*Anytown, CA* | *2020 – Present*
+{{#work_experience}}
 
-* Led development of a high-performance REST API handling over 1 million requests daily.
-* Mentored junior engineers and contributed to team best practices in code review and deployment.
-* Managed the migration of the database infrastructure from MySQL to PostgreSQL.
+### **{{title}}** | **{{company_name}}**
 
-### **Software Engineer** | **Innovate Startups**
-*Anytown, CA* | *2018 – 2020*
+{{#company_address}}{{city}}, {{state}}{{/company_address}}
+| {{#start_date}}{{month}} {{year}}{{/start_date}} - {{#end_date}}{{month}} {{year}}{{/end_date}}
 
-* Developed key features for the flagship mobile application using React Native.
-* Reduced cloud hosting costs by 15% through infrastructure optimization.
+{{#accomplishments}}
+- {{.}}
+{{/accomplishments}}
+
+{{/work_experience}}
 
 ## Education
 
