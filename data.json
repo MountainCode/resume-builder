@@ -6,13 +6,17 @@
       "state": "VT",
       "zip": "05464"
     },
-    "phone": "(802) 990-3123",
-    "email": "chris@unstuckdev.com"
+    "email": "chris@unstuckdev.com",
+    "phone": "(802) 990-3123"
   },
   "social": {
+    "github": {
+      "text": "github.com/MountainCode",
+      "url": "https://github.com/MountainCode"
+    },
     "linkedin": {
-      "url": "https://linkedin.com/in/chriskentfield",
-      "text": "linkedin.com/in/chriskentfield"
+      "text": "linkedin.com/in/chriskentfield",
+      "url": "https://linkedin.com/in/chriskentfield"
     }
   }
 }

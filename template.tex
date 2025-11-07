@@ -24,7 +24,7 @@ $endif$
 \geometry{$geometry$}
 \usepackage{titlesec}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
 
 % Remove page number
 \pagestyle{empty}
@@ -48,7 +48,10 @@ $endif$
 \fancyfoot{} % Clear all footer fields
 
 % 1. Place the Author Name in the Center of the header (C)
-\fancyhead[C]{\huge\textbf{$author$}}
+\fancyhead[C]{
+  \huge\textbf{$author$} \\
+  \normalsize $jobtitle$
+}
 
 % 2. Use the 'L' and 'R' sections for the header-info
 % NOTE: This is complex. A better approach is often to skip fancyhdr for this specific need.
@@ -57,11 +60,14 @@ $endif$
 \fancypagestyle{plain}{ % Redefine the 'plain' style (used for page 1)
     \fancyhead{}
     \fancyfoot{}
-    \fancyhead[C]{\huge\textbf{$author$}}
+    \fancyhead[C]{
+      \huge\textbf{$author$} \\
+      \normalsize $jobtitle$
+    }
     \fancyhead[R]{} % Clear the right side for the name
 
     % Now, add the header-info below the rule, NOT using fancyhdr
-    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\headrulewidth}{0pt}
 }
 \pagestyle{plain} % Apply this style to the entire document
 
