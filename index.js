@@ -25,6 +25,7 @@ try {
       }
     )
   };
+  console.log('Creating out/resume.md');
   const markdown = Mustache.render(
     template,
     dataForView
@@ -34,6 +35,7 @@ try {
     markdown,
     { encoding: 'utf-8' }
   );
+  console.log('Generating out/resume.pdf');
   const { stdout, stderr } = await exec(
     `pandoc out/resume.md -o out/resume.pdf \
        --template=template.tex \
@@ -41,8 +43,9 @@ try {
 `
   );
 
-  console.log(stdout);
-  console.error(stderr);
+  if(stdout) { console.log(stdout); }
+  if(stderr) { console.error(stderr); }
+  if(!console.stderr) { console.log('Done'); }
 } catch(err) {
   console.error(err);
 }
