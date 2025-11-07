@@ -2,13 +2,16 @@ import { readFile, writeFile } from 'node:fs/promises';
 import Mustache from 'mustache';
 import childProcess from 'child_process';
 import { promisify } from 'util';
+import { parse } from 'yaml';
+import _ from 'lodash';
 
 const exec = promisify(childProcess.exec);
 
 try {
   const template = await readFile('resume.md.mustache', { encoding: 'utf-8' });
   const jsonData = await readFile('data.json', { encoding: 'utf-8' });
-  const data = JSON.parse(jsonData);
+  const yamlData = await readFile('data.yml', { encoding: 'utf-8'});
+  const data = _.merge(JSON.parse(jsonData), parse(yamlData));
   const dataForView = {
     ...data,
     skills_by_category: data.skills_by_category.map(
@@ -31,7 +34,7 @@ try {
     markdown,
     { encoding: 'utf-8' }
   );
-  console.log(markdown);
+  //console.log(markdown);
   const { stdout, stderr } = await exec(
     `pandoc out/resume.md -o out/resume.pdf \
        --template=template.tex \

@@ -1,0 +1,166 @@
+professional_summary: >
+  Since 2005, I've been doing full-stack work on complex web
+  platforms. The majority of my experience has been with e-commerce
+  systems on a Microsoft tech stack. I have worked autonomously, led
+  teams and mentored junior developers throughout my career. I have
+  extensive experience analyzing complex legacy systems, refactoring
+  them for performance, security, scalability and reliability. I've
+  been involved in the architecture of several platforms and ported
+  multiple systems to modern tech stacks!
+
+work_experience:
+  - company_name: WebMD
+    title: Principal Full Stack Developer and Architecture Consultant
+    company_address:
+      city: New York
+      state: NY
+    start_date:
+      month: May
+      year: 2023
+    end_date:
+      month: January
+      year: 2025
+    accomplishments:
+      - Collaborated with the Lead Architect to design the .NET Core
+        system.
+      - Modernized legacy .NET Framework applications to .NET Core
+        incorporating universal dependency injection.
+      - Converted ad-hoc jQuery implementations to Angular for better
+        consistency and improved user experience.
+      - Researched existing undocumented systems and created detailed
+        documentation to facilitate future development.
+      - Dramatically improved performance of the development
+        environment, optimizing workflow.
+
+  - company_name: SiegelTech
+    title: Lead Architect and Principal Developer
+    company_address:
+      city: Huntsville
+      state: UT
+    start_date:
+      month: January
+      year: 2020
+    end_date:
+      month: April
+      year: 2023
+    accomplishments:
+      - Directed a development team of six, with two members based in the
+        U.S. and four in Ukraine.
+      - Engineered modular, dependency injection based, .NET Core
+        microservices capable of supporting scalable Web APIs.
+      - Designed and implemented an API Gateway utilizing
+        Node.js/Koa/RxJs for front-end integration.
+      - Counseled the COO and CTO on development processes and
+        industry best practices.
+      - Established a comprehensive software development lifecycle
+        and deployed Azure CI/CD systems.
+      - Migrated features from a legacy WebForms system to a modern
+        architecture.
+      - Engaged with business stakeholders to capture requirements
+        effectively for the project management and development
+        teams.
+
+  - company_name: Beyond Diet
+    title: Principal Full Stack Developer
+    company_address:
+      city: Manchester
+      state: VT
+    start_date:
+      month: April
+      year: 2014
+    end_date:
+      month: February
+      year: 2019
+    accomplishments:
+      - Finalized a complex shopping basket and payment processing
+        system integrated with Braintree.
+      - Led the design and development of meal planning and weight
+        tracking tools, (similar to MyFitnessPal).
+      - Created social features for user interaction, including
+        discussions, feeds, and search.
+      - Developed a content management system (CMS) and blogging tools
+        used by content team.
+      - Conceived and executed SEO strategies, sales funnel
+        optimization, and A/B split testing tools.
+      - Established Azure build and deployment pipelines for
+        continuous integration and delivery (CI/CD).
+      - Collaborated with business stakeholders to capture project
+        requirements accurately for the project manager and dev team.
+      - Primary developer responsible for bug fixes, performance
+        monitoring, and ongoing maintenance.
+
+  - company_name: Orvis
+    title: Full Stack Web Developer
+    company_address:
+      city: Sunderland
+      state: VT
+    start_date:
+      month: January
+      year: 2008
+    end_date:
+      month: April
+      year: 2014
+    accomplishments:
+      - Worked closely with senior developers to migrate international
+        e-commerce systems from VB Classic to VB.NET WebForms.
+      - Conceived and constructed customer-facing user interfaces for
+        product search and sales, utilizing Endeca search technology.
+      - Implemented website statistic tracking using Coremetrics to
+        monitor performance and user behavior.
+      - Converted many physical servers to virtual machines for
+        enhanced efficiency.
+      - Designed, maintained, and optimized SQL queries for production
+        SQL Server databases to improve data retrieval times.
+      - Collaborated with stakeholders across multiple departments to
+        gather and refine requirements.
+      - Enhanced features within a custom CMS and the product
+        management tool to improve usability.
+
+  - company_name: Logic Shop
+    title: Owner / Full Stack Developer
+    company_address:
+      city: Manchester
+      state: VT
+    start_date:
+      month: August
+      year: 2007
+    end_date:
+      month: March
+      year: 2015
+    accomplishments:
+      - Worked closely with small business owners to develop tailored
+        website solutions to meet specific needs.
+      - Engineered a Java-based platform with a custom CMS designed to
+        serve diverse clients in real estate, e- commerce,
+        hospitality, and construction.
+      - Hosted client websites on VPNs leveraging Linux, Nginx, and
+        Ruby.
+      - Acquired AlphaLynx clients, migrating legacy .NET systems to
+        Java/JRuby using IKVM to consolidate functionality across
+        various platforms.
+
+  - company_name: AlphaLynx
+    title: Full Stack Developer
+    company_address:
+      city: Manchester
+      state: VT
+    start_date:
+      month: July
+      year: 2005
+    end_date:
+      month: September
+      year: 2007
+    accomplishments:
+      - Maintained and enhanced functionality of a VB Classic real
+        estate platform.
+      - Designed and built a comprehensive database and search
+        functionality for real estate listings.
+      - Developed automated tools for daily import of Multiple Listing
+        Services (MLS) data from varied formats, to ensure data
+        consistency.
+      - Engaged directly with real estate agents to customize their
+        website's aesthetic and functional requirements.
+      - Modernized the VB Classic platform to a C#/WebForms
+        architecture.
+      - Supervised a three-person development team based in India,
+        ensuring project milestones were met efficiently.

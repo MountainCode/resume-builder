@@ -19,7 +19,6 @@
       "url": "https://linkedin.com/in/chriskentfield"
     }
   },
-  "professional_summary": "Since 2005, I've been doing full-stack work on complex web platforms. The majority of my experience has been with e-commerce systems on a Microsoft tech stack. I have worked autonomously, led teams and mentored junior developers throughout my career. I have extensive experience analyzing complex legacy systems, refactoring them for performance, security, scalability and reliability. I've been involved in the architecture of several platforms and ported multiple systems to modern tech stacks.",
   "skills_by_category": [{
     "category": "Programming Languages",
     "skills": [ "C#", "TypeScript", "JavaScript" ]
