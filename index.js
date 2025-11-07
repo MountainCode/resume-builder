@@ -35,9 +35,10 @@ try {
     markdown,
     { encoding: 'utf-8' }
   );
-  console.log('Generating out/resume.pdf');
+  const resumeFile = `out/${data.author} Resume.pdf`;
+  console.log(`Generating ${resumeFile}`);
   const { stdout, stderr } = await exec(
-    `pandoc out/resume.md -o out/resume.pdf \
+    `pandoc out/resume.md -o '${resumeFile}' \
        --template=template.tex \
        --pdf-engine=lualatex
 `
