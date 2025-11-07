@@ -10,6 +10,10 @@
     "phone": "(802) 990-3123"
   },
   "social": {
+    "web": {
+      "text": "chriskentfield.com",
+      "url": "https://chriskentfield.com"
+    },
     "github": {
       "text": "github.com/MountainCode",
       "url": "https://github.com/MountainCode"
@@ -21,18 +25,32 @@
   },
   "skills_by_category": [{
     "category": "Programming Languages",
-    "skills": [ "C#", "TypeScript", "JavaScript" ]
+    "skills": [ "C#", "TypeScript", "JavaScript", "HTML", "CSS" ]
   }, {
     "category": "Frameworks/Libraries",
-    "skills": [ ".NET Core", "WebForms", "Angular" ]
+    "skills": [ ".NET Core", "WebForms", "Angular", "Linq" ]
   }, {
     "category": "Tools",
-    "skills": [ "Docker", "Git", "Azure", "Azure DevOps" ]
+    "skills": [ "Docker", "Git", "Azure", "Azure DevOps", "Redis", "Swagger", "SQL Server" ]
+  }, {
+    "category": "Architecture",
+    "skills": [ "Dependency Injection", "SOLID", "REST" ]
   }],
-  "work_experience": [{
-    "company": "Beyond Diet",
-    "accomplishments": [
-      "Led and maintained e-commerce website handling over 1 million purchase per day"
-    ]
-  }]
+  "education": {
+    "school": {
+      "name": "Vermont Technical College",
+      "city": "Randolph",
+      "state": "VT"
+    },
+    "degree": "Bachelor of Science",
+    "field": "Computer Engineering",
+    "start_date": {
+      "month": "May",
+      "year": "2000"
+    },
+    "end_date": {
+      "month": "September",
+      "year": "2004"
+    }
+  }
 }

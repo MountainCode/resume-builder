@@ -10,7 +10,8 @@ contact: |
   {{/contact}}
 social: |
   {{#social}}
-    {{#linkedin}}[{{text}}]({{url}}){{/linkedin}}
+    {{#web}}[{{text}}]({{url}}){{/web}}
+    | {{#linkedin}}[{{text}}]({{url}}){{/linkedin}}
     | {{#github}}[{{text}}]({{url}}){{/github}}
   {{/social}}
 fontsize: 10pt
@@ -45,10 +46,15 @@ numbersections: false
 
 {{/work_experience}}
 
+{{#education}}
 ## Education
 
-### **University of California, Berkeley**
-*Berkeley, CA* | *2014 – 2018*
 
-* **B.S. in Computer Science**
-* *Relevant Coursework:* Data Structures, Algorithms, Distributed Systems
+
+{{#school}}
+### **{{name}}** - *{{city}}, {{state}}* | *{{start_date.year}} – {{end_date.year}}*
+{{/school}}
+
+**{{degree}} in {{field}}**
+
+{{/education}}

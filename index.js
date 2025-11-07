@@ -34,7 +34,6 @@ try {
     markdown,
     { encoding: 'utf-8' }
   );
-  //console.log(markdown);
   const { stdout, stderr } = await exec(
     `pandoc out/resume.md -o out/resume.pdf \
        --template=template.tex \
