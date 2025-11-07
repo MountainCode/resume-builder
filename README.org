@@ -1,3 +1,10 @@
 #+begin_src shell
+docker build -t resume .
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume /bin/bash
+#+end_src
+#+begin_src shell
 pandoc resume.md -o out/resume.pdf --template=template.tex --pdf-engine=lualatex
+#+end_src
+#+begin_src shell
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app -it resume pandoc resume.md -o out/resume.pdf --template=template.tex --pdf-engine=lualatex
 #+end_src
